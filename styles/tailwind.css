@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    ul, ol {
+      list-style: square;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(106, 9, 231, 0.302);
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(247, 18, 189, 0.5);
+  }
+  body {
+    font-family: 'Baloo Thambi 2', cursive;
+    text-rendering: optimizeLegibility;
+  }
+  table {
+    width: 100%;
+    padding: 12px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+  }
+  th {
+    overflow-wrap: break-word;
+  }
+  tr {
+    overflow-wrap: break-word;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid rgb(19, 13, 13);
+    overflow-wrap: break-word;
+  }
+  th,
+  td {
+    text-align: left;
+    padding: 10px;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+  table thead tr,
+  table tfoot tr {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  table tbody tr {
+    background: rgba(231, 3, 3, 0.08);
+  }
+  table tr > th {
+    text-align: left;
+  }
+  table tr > th,
+  tr > td {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+  }
+  #pagination {
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+  #pagination > a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 0;
+    background-color: #7bff0014;
+    color: #000;
+    font-weight: 600;
+  }
+  #pagination > a:last-child {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  #pagination > a:hover {
+    color: #fb3c00;
+  }
+  .html2canvas-container {
+    width: 700px !important;
+    height: 700px !important;
+  }
+  .pagination {
+    max-width: 400px;
+    min-width: 300px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgb(210, 219, 210);
+    padding: 20px;
+  }
+  .pagination .tableList {
+    min-height: 150px;
+    text-indent: 20px;
+  }
+  .tableList .objectBlock {
+    position: relative;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .pageButton {
+    border: 1px solid black;
+    padding: 5px;
+  }
+  .clickPageNumber {
+    background-color: lightgrey;
+    padding: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .pagination-block {
+    text-align: center;
+    width: 100%;
+  }
+  .pagination-block span {
+    display: inline-block;
+  }
+  .pagination-block .pageButton {
+    background-color: grey;
+    color: white;
+  }
+  .pagination-block span:hover {
+    cursor: pointer;
+  }
+  .opacity-page {
+    opacity: 0.5;
+  }
+  .outline-none {
+    outline: none;
+    user-select: none;
+  }
+  canvas {
+    image-rendering: optimizeSpeed;           
+    image-rendering: -moz-crisp-edges;          
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: -o-crisp-edges; 
+    image-rendering: crisp-edges;        
+    -ms-interpolation-mode: nearest-neighbor;
+}
+.hashtags {
+  background: #f857a6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff5858, #f857a6);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

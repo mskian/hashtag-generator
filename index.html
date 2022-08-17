@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#ffffff" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="196x196"
+            href="/icons/favicon-196.png"
+        />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="/icons/favicon.ico"
+        />
+        <link rel="apple-touch-icon" href="/icons/apple-icon-180.png" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="Happy Independence Day" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+            name="apple-mobile-web-app-title"
+            content="Happy Independence Day"
+        />
+        <title>Hashtag Generator - Convert Keywords to hashtag</title>
+        <meta
+            name="description"
+            content="Hashtag Generator - Convert Keywords to hashtag - Generate Hastag for your Facebook, instagram, Twitter and Telegram Posts."
+        />
+        <meta
+            property="og:image"
+            content="https://images.weserv.nl/?url=https://generate.tamilwords.net/og/og?name=Hashtag-Generator"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://images.weserv.nl" />
+        <link rel="manifest" href="/manifest.json" />
+
+        <script>
+            function hashtag() {
+                const getHashtags =
+                    document.getElementById('getkeywords').value;
+                const cleanUsertags = getHashtags.replace(/[^\w ]/g, '');
+                const tagged = cleanUsertags.replace(/(\w+)/gi, '#' + '$1');
+                document.getElementById('getkeywords').value = tagged;
+            }
+            function copyHashtags() {
+                const copyText = document.querySelector('#getkeywords').value;
+                navigator.clipboard.writeText(copyText).then(() => {
+                    document.getElementById(
+                        'copytags'
+                    ).innerHTML = `<br><div class="flex items-center justify-center"><div class="px-4 py-3 leading-normal bg-indigo-500 rounded-lg shadow-2xl" role="alert"><p class="text-white">Copied</p></div></div>`;
+                });
+            }
+        </script>
+    </head>
+    <body>
+        <div class="min-h-screen px-4 py-2 mx-auto sm:px-6 lg:px-8 bg-gray-200">
+            <div class="max-w-lg mx-auto">
+                <form
+                    id="postData"
+                    method="post"
+                    accept-charset="UTF-8"
+                    class="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl"
+                    style="background-color: #94a3b8"
+                    onsubmit="return false;"
+                >
+                    <div
+                        class="px-4 py-3 leading-normal text-black bg-amber-400 rounded-lg shadow-2xl"
+                        role="alert"
+                    >
+                        Avoid Special characters, Emoji and Symbols - Just add
+                        your Keywords leave Space to add multiple keywords and
+                        Click Generate.
+                    </div>
+                    <div class="relative mt-1">
+                        <div
+                            x-data="{
+                            content: '',
+                            limit: $el.dataset.limit,
+                            get remaining() {
+                                return this.limit - this.content.length
+                            }
+                        }"
+                            data-limit="400"
+                        >
+                            <textarea
+                                rows="10m"
+                                id="getkeywords"
+                                name="getkeywords"
+                                class="placeholder:text-gray-700 placeholder:text-center form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-lg transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                                placeholder="Enter Keywords"
+                                maxlength="400"
+                                x-ref="content"
+                                x-model="content"
+                                autocomplete="off"
+                                required
+                                onkeyup="hashtag();"
+                            ></textarea>
+                            <br />
+                            <div
+                                class="px-4 py-3 leading-normal text-white bg-pink-500 rounded-lg shadow-2xl"
+                                role="alert"
+                            >
+                                <p x-ref="remaining">
+                                    You have
+                                    <span x-text="remaining"></span> characters
+                                    remaining.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        type="submit"
+                        class="block w-full px-5 py-3 text-lg font-medium text-gray-700 bg-orange-200 rounded-lg"
+                    >
+                        Generate
+                    </button>
+                </form>
+                <div id="result"></div>
+                <div id="copytags"></div>
+            </div>
+            <br />
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
+</html>
