@@ -1,0 +1,40 @@
+name: cloudflare-pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '16' ]
+    name: Node ${{ matrix.node }}
+    steps:
+      - uses: actions/checkout@v3.0.2
+      - name: Cache node modules
+        uses: actions/cache@v3.0.7
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-build-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: | 
+            ${{ runner.OS }}-build-${{ env.cache-name }}-
+            ${{ runner.OS }}-build-
+            ${{ runner.OS }}-
+      - name: Setup node
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: yarn install
+      - run: yarn css
+      - run: yarn build
+    name: Deploy
+    steps:
+      - name: Publish
+        uses: cloudflare/wrangler-action@2.0.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          command: pages publish dist --project-name=hashtag

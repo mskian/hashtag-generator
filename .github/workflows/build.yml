@@ -17,4 +17,5 @@ jobs:
     - name: use yarn
       run: |
        yarn install
+       yarn css
        yarn build
