@@ -1,6 +1,6 @@
 # Hashtag Generator
 
-[![build-script](https://github.com/mskian/hashtag-generator/actions/workflows/build.yml/badge.svg)](https://github.com/mskian/hashtag-generator/actions/workflows/build.yml)  
+[![build-script](https://github.com/mskian/hashtag-generator/actions/workflows/build.yml/badge.svg)](https://github.com/mskian/hashtag-generator/actions/workflows/build.yml) [![cloudflare-pages](https://github.com/mskian/hashtag-generator/actions/workflows/deploy.yml/badge.svg)](https://github.com/mskian/hashtag-generator/actions/workflows/deploy.yml)  
 
 ⚡ Vitejs | ✨ Tailwind CSS | 🎩 Alpine.js | 🌩 Cloudflare Pages  
 
@@ -21,7 +21,7 @@ Hashtag Generator - Convert Keywords to hashtag - Generate Hastag for your Faceb
 - Prettier - Beautify the Code files
 - Progressive Web App (Soon)
 - Clipboard API - <https://developer.mozilla.org/en-US/docs/Web/API/Clipboard_API>
-- Cloudflare Pages for Hosting - `npx wrangler pages publish dist`
+- Cloudflare Pages for Hosting  
 
 ## Installation 📦
 
@@ -72,6 +72,12 @@ yarn lintfix
 
 ```sh
 yarn Format
+```
+
+- Deploy to Cloudflare pages
+
+```sh
+npx wrangler pages publish dist --branch production --project-name=<YOUR-PROJECT-NAME> --commit-dirty=true
 ```
 
 ## LICENSE ☑

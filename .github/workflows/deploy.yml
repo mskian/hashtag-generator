@@ -26,4 +26,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          command: pages publish dist --project-name=hashtag
+          command: pages publish dist --branch production --project-name=hashtag --commit-dirty=true
