@@ -8,7 +8,7 @@ Hashtag Generator - Convert Keywords to hashtag - Generate Hastag for your Faceb
 
 > Hashtag Generator - Convert Keywords to hashtag  
 
-- Live Site - <https://hashtag.pages.dev/>  
+- Live Site - <https://hashtag.sanweb.info/>  
 
 ## Methods Used ⚙
 
