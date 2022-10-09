@@ -36,7 +36,7 @@
     "vite": "^3.1.4"
   },
   "dependencies": {
-    "alpinejs": "^3.10.3",
+    "alpinejs": "^3.10.4",
     "sanitize-html": "^2.7.2"
   }
 }
