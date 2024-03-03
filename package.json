@@ -28,7 +28,7 @@
   "homepage": "https://github.com/mskian/hashtag-generator#readme",
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.18",
     "eslint": "^8.57.0",
     "postcss": "^8.4.35",
     "prettier": "^3.2.5",
