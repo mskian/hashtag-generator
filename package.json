@@ -33,7 +33,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
-    "vite": "^5.1.6"
+    "vite": "^5.2.6"
   },
   "dependencies": {
     "alpinejs": "^3.13.7",
