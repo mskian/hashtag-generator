@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "alpinejs": "^3.14.1",
-    "sanitize-html": "^2.13.0"
+    "sanitize-html": "^2.13.1"
   }
 }
