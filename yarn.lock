@@ -467,10 +467,10 @@ ajv@^6.14.0:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-alpinejs@^3.17.0:
-  version "3.17.0"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.17.0.tgz#968c3b3f9f604b511259f19a4dd4a21aeb2ba5fe"
-  integrity sha512-LDLcfqFsiQrdFCNqK7zWyfjx2QE2sjPw0bIPThLVHMIQATAp1dNRKga1xPSqC+71UYFiosIYblLszzzo9r9k6A==
+alpinejs@^3.17.1:
+  version "3.17.1"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.17.1.tgz#b0eea3e9a08606e5c270e77bc45214da72cfbbcb"
+  integrity sha512-HDUhA9juSA/pNYZ5FAAlW4qNsdeVORFSVONEIu0hVasqCOqLitf15R9tCr5GBCV0ZxiZW2Qx6BYdMSF7iGLT/Q==
   dependencies:
     "@vue/reactivity" "~3.5.40"
 
