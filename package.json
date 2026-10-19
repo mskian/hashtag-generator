@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "alpinejs": "^3.17.4",
-    "sanitize-html": "^2.18.0"
+    "sanitize-html": "^2.18.1"
   }
 }
