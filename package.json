@@ -29,7 +29,7 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.11",
     "autoprefixer": "^10.7.0",
-    "eslint": "^9.39.5",
+    "eslint": "^10.16.0",
     "postcss": "^8.5.33",
     "prettier": "^3.10.1",
     "tailwindcss": "^3.4.19",
